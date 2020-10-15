@@ -1,3 +1,4 @@
+
 ;;; debbugs-gnu.el --- interface for the GNU bug tracker  -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2011-2020 Free Software Foundation, Inc.
@@ -204,6 +205,8 @@
 (defvar gnus-posting-styles)
 (defvar gnus-save-duplicate-list)
 (defvar gnus-suppress-duplicates)
+(defvar mail-extr-ignore-realname-equals-mailbox-name)
+(defvar mail-extr-ignore-single-names)
 (defvar message-sent-message-via)
 (defvar rmail-current-message)
 (defvar rmail-mode-map)
@@ -2396,8 +2399,8 @@ If SELECTIVELY, query the user before applying the patch."
     ;; buffer.  Determine which.
     (with-current-buffer gnus-article-buffer
       (dolist (handle (mapcar #'cdr (gnus-article-mime-handles)))
-	(when
-	    (string-match "diff\\|patch\\|plain\\|octet" (mm-handle-media-type handle))
+	(when (string-match "diff\\|patch\\|plain\\|octet\\|verbatim"
+			    (mm-handle-media-type handle))
 	  (push (cons (mm-handle-encoding handle)
 		      (mm-handle-buffer handle))
 		patch-buffers))))
@@ -2406,7 +2409,7 @@ If SELECTIVELY, query the user before applying the patch."
       (with-current-buffer gnus-article-buffer
 	(article-decode-charset))
       (push (cons nil gnus-article-buffer) patch-buffers))
-    (dolist (elem patch-buffers)
+    (dolist (elem (nreverse patch-buffers))
       (with-current-buffer (generate-new-buffer "*debbugs input patch*")
 	(insert-buffer-substring (cdr elem))
 	(cond ((eq (car elem) 'base64)
@@ -2573,7 +2576,7 @@ If SELECTIVELY, query the user before applying the patch."
 		  (forward-line 1))
 		(setq changelog (buffer-substring
 				 start (line-end-position 0)))))))))
-    (setq from (mail-extract-address-components (or patch-from from)))
+    (setq from (debbugs-gnu--parse-mail (or patch-from from)))
     (let ((add-log-full-name (car from))
 	  (add-log-mailing-address (cadr from)))
       (add-change-log-entry-other-window)
@@ -2677,12 +2680,17 @@ If SELECTIVELY, query the user before applying the patch."
 \\{debbugs-gnu-log-edit-mode-map}"
   :lighter " Debbugs" :keymap debbugs-gnu-log-edit-mode-map)
 
+(defun debbugs-gnu--parse-mail (string)
+  (let* ((mail-extr-ignore-single-names nil)
+	 (mail-extr-ignore-realname-equals-mailbox-name nil))
+    (mail-extract-address-components string)))
+
 (defun debbugs-gnu-log-edit-done ()
   "Finish editing the log edit and commit the files."
   (interactive)
   (let ((author (mail-fetch-field "Author")))
     (when (> (length author) 0)
-      (let ((from (mail-extract-address-components author)))
+      (let ((from (debbugs-gnu--parse-mail author)))
 	(when (and (zerop (debbugs-gnu-find-contributor
 			   (let ((bits (split-string (car from))))
 			     (cond
