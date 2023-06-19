@@ -1052,18 +1052,7 @@ are taken from the cache instead."
 (defun debbugs-gnu-print-entry (list-id cols)
   "Insert a debbugs entry at point.
 Used instead of `tabulated-list-print-entry'."
-  (let ((beg (point))
-	(pos 0)
-	(case-fold-search t)
-	(id               (aref cols 0))
-	(id-length        (nth 1 (aref tabulated-list-format 0)))
-	(state            (aref cols 1))
-	(state-length     (nth 1 (aref tabulated-list-format 1)))
-	(submitter        (aref cols 2))
-	(submitter-length (nth 1 (aref tabulated-list-format 2)))
-	(title            (aref cols 3))
-	;; (title-length     (nth 1 (aref tabulated-list-format 3)))
-        )
+  (let ((case-fold-search t))
     (when (and
 	   ;; We may have a narrowing in effect.
 	   (or (not debbugs-gnu-limit)
@@ -1090,32 +1079,12 @@ Used instead of `tabulated-list-print-entry'."
 				       (> (cddr check) val)))
 			  (throw :suppress t))))))))
 
-      ;; Insert id.
-      (indent-to (- id-length (length id)))
-      (insert id)
-      ;; Insert state.
-      (indent-to (setq pos (+ pos id-length 1)) 1)
-      (insert (if (> (length state) state-length)
-		  (propertize (substring state 0 state-length)
-			      'help-echo state)
-		state))
-      ;; Insert submitter.
-      (indent-to (setq pos (+ pos state-length 1)) 1)
-      (insert (if (> (length submitter) submitter-length)
-		  (propertize (substring submitter 0 submitter-length)
-			      'help-echo submitter)
-		submitter))
-      (indent-to (+ pos (1- submitter-length)))
-      ;; Insert title.
-      (indent-to (setq pos (+ pos submitter-length 1)) 1)
-      (insert (propertize title 'help-echo title))
+      (tabulated-list-print-entry list-id cols)
+
       ;; Add properties.
       (add-text-properties
-       beg (point)
-       `(tabulated-list-id ,list-id
-	 tabulated-list-entry ,cols
-	 mouse-face highlight))
-      (insert ?\n))))
+       (line-beginning-position 0) (line-end-position 0)
+       '(mouse-face highlight)))))
 
 (defun debbugs-gnu-menu-map-emacs-enabled ()
   "Whether \"Show Release Blocking Bugs\" is enabled in the menu."
@@ -1191,10 +1160,10 @@ Used instead of `tabulated-list-print-entry'."
 		  :help "Send control message to debbugs.gnu.org")
       #'debbugs-gnu-show-all-blocking-reports)
     (define-key-after menu-map [debbugs-gnu-make-control-message]
-      '(menu-item "Make Control Message"
+      `(menu-item "Make Control Message"
 		  debbugs-gnu-make-control-message
-		  :help (concat "Make (but don't yet send) "
-				"a control message to debbugs.gnu.org"))
+		  :help ,(concat "Make (but don't yet send) "
+				 "a control message to debbugs.gnu.org"))
       #'debbugs-gnu-send-control-message)
 
     (define-key-after menu-map [debbugs-gnu-separator1]
@@ -1262,6 +1231,7 @@ Interactively, it is non-nil with the prefix argument."
 			       ("Title"     10 debbugs-gnu-sort-title)])
   (setq tabulated-list-sort-key (cons "Id" nil))
   (setq tabulated-list-printer #'debbugs-gnu-print-entry)
+  (add-hook 'tabulated-list-revert-hook #'debbugs-gnu-rescan nil t)
   (buffer-disable-undo)
   (setq truncate-lines t)
   (setq buffer-read-only t))
@@ -1324,10 +1294,12 @@ Interactively, it is non-nil with the prefix argument."
 (defun debbugs-gnu-sort-submitter (s1 s2)
   (let ((address1
 	 (debbugs-gnu--split-address
-	  (decode-coding-string (alist-get 'originator (car s1) "") 'utf-8)))
+	  (decode-coding-string
+           (or (alist-get 'originator (car s1)) "") 'utf-8)))
 	(address2
 	 (debbugs-gnu--split-address
-	  (decode-coding-string (alist-get 'originator (car s2) "") 'utf-8))))
+	  (decode-coding-string
+           (or (alist-get 'originator (car s2)) "") 'utf-8))))
     (cond
      ;; Bugs I'm the originator of go to the beginning.
      ((and (string-equal user-mail-address (car address1))
@@ -1345,14 +1317,16 @@ Interactively, it is non-nil with the prefix argument."
 (defun debbugs-gnu-sort-title (s1 s2)
   (let ((owner1
 	 (car (debbugs-gnu--split-address
-	       (decode-coding-string (alist-get 'owner (car s1) "") 'utf-8))))
+	       (decode-coding-string
+                (or (alist-get 'owner (car s1)) "") 'utf-8))))
 	(subject1
-	 (decode-coding-string (alist-get 'subject (car s1) "") 'utf-8))
+	 (decode-coding-string (or (alist-get 'subject (car s1)) "") 'utf-8))
 	(owner2
 	 (car (debbugs-gnu--split-address
-	       (decode-coding-string (alist-get 'owner (car s2) "") 'utf-8))))
+	       (decode-coding-string
+                (or (alist-get 'owner (car s2)) "") 'utf-8))))
 	(subject2
-	 (decode-coding-string (alist-get 'subject (car s2) "") 'utf-8)))
+	 (decode-coding-string (or (alist-get 'subject (car s2)) "") 'utf-8)))
     (cond
      ;; Bugs I'm the owner of go to the beginning.
      ((and (string-equal user-mail-address owner1)
