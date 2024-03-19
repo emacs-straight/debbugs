@@ -82,7 +82,7 @@ servers: \"gnu.org\" and \"debian.org\"."
 				   (string :tag "Bugreport URL")))))))
 
 (defcustom debbugs-port "gnu.org"
-  "The port instance to be applied from `debbugs-wsdl'.
+  "The port instance to be applied from `debbugs-servers'.
 This corresponds to the Debbugs server to be accessed, either
 \"gnu.org\", or \"debian.org\", or user defined port name."
   ;; Maybe we should create an own group?
@@ -113,8 +113,8 @@ This corresponds to the Debbugs server to be accessed, either
 (defcustom debbugs-cache-expiry (* 60 60)
   "How many seconds debbugs query results are cached.
 t or 0 disables caching, nil disables expiring."
-  :type '(choice (const :tag "Always" t)
-		 (const :tag "Never" nil)
+  :type '(choice (const :tag "Never" t)
+		 (const :tag "Forever" nil)
 		 (integer :tag "Seconds")))
 
 (defvar debbugs-soap-invoke-async-object nil
@@ -233,7 +233,7 @@ Valid keywords are:
   :affects -- With this keyword it is possible to find bugs which
   affect the package with the given name.  The bugs are chosen by
   the value of field `affects' in bug's status.  The returned bugs
-  do not necessary belong to this package.
+  usually do not belong to this package.
 
   :status -- Status of bug.  Valid values are \"open\",
   \"forwarded\" and \"done\".
@@ -259,7 +259,8 @@ patch:
 	debbugs-progress-reporter-buffers url-show-status vec kw key val)
     (when debbugs-show-progress
       (add-function
-       :override (symbol-function debbugs-url-display-message-or-percentage-function)
+       :override
+       (symbol-function debbugs-url-display-message-or-percentage-function)
        #'debbugs-url-display-message-or-percentage
        '((name . "debbugs-url-display-message-or-percentage"))))
 
@@ -488,7 +489,8 @@ Example:
 	    debbugs-progress-reporter-buffers url-show-status results res)
 	(when debbugs-show-progress
 	  (add-function
-	   :override (symbol-function debbugs-url-display-message-or-percentage-function)
+	   :override
+           (symbol-function debbugs-url-display-message-or-percentage-function)
 	   #'debbugs-url-display-message-or-percentage
 	   '((name . "debbugs-url-display-message-or-percentage"))))
 
@@ -805,7 +807,8 @@ Examples:
     (when debbugs-create-progress-reporter
       (setq debbugs-progress-reporter (make-progress-reporter "Query bugs..."))
       (add-function
-       :override (symbol-function debbugs-url-display-message-or-percentage-function)
+       :override
+       (symbol-function debbugs-url-display-message-or-percentage-function)
        #'debbugs-url-display-message-or-percentage
        '((name . "debbugs-url-display-message-or-percentage"))))
 
@@ -976,7 +979,8 @@ BUG-OR-MESSAGE must be list element returned by either
 Example: Return the originator of last submitted bug.
 
 \(debbugs-get-attribute
-  \(car \(apply #\\='debbugs-get-status \(debbugs-newest-bugs 1))) \\='originator)"
+  \(car \(apply #\\='debbugs-get-status \(debbugs-newest-bugs 1)))
+  \\='originator)"
   (alist-get attribute bug-or-message))
 
 (defun debbugs-get-message-numbers (messages)

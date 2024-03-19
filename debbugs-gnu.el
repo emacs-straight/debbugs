@@ -857,8 +857,7 @@ This function assumes the variable `user-mail-address' is defined."
 
 (defun debbugs-gnu-get-bugs (query)
   "Retrieve bug numbers from debbugs.gnu.org according search criteria."
-  (let* ((debbugs-port "gnu.org")
-	 (bugs (assq 'bugs query))
+  (let* ((bugs (assq 'bugs query))
 	 (tags (and (member '(severity . "tagged") query) (assq 'tag query)))
 	 (local-tags (and (member '(severity . "tagged") query) (not tags)))
 	 (phrase (assq 'phrase query))
@@ -1575,7 +1574,7 @@ interesting to you."
 		     (debbugs-gnu-current-status)))
   (switch-to-buffer "*Bug Status*")
   (let ((inhibit-read-only t)
-        (pp-default-function #'pp-29))
+        (pp-default-function 'pp-29))
     (erase-buffer)
     (when query
       (insert ";; Query\n")
@@ -2419,7 +2418,6 @@ successfully sent."
      debbugs-gnu-default-packages))
 
   (let ((inhibit-read-only t)
-	(debbugs-port "gnu.org")
 	(buffer-name "*Emacs User Tags*")
 	(user-tab-length
 	 (1+ (apply #'max (length "User") (mapcar #'length users)))))
