@@ -1,4 +1,4 @@
-This is docuJNutD.info, produced by makeinfo version 6.8 from
+This is docIBHnC1.info, produced by makeinfo version 6.8 from
 debbugs-ug.texi.
 
 Copyright (C) 2015-2024 Free Software Foundation, Inc.
@@ -24,7 +24,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docuJNutD.info,  Node: Top,  Next: Retrieving Bugs,  Up: (dir)
+File: docIBHnC1.info,  Node: Top,  Next: Retrieving Bugs,  Up: (dir)
 
 Debbugs User Guide
 ******************
@@ -59,10 +59,41 @@ Mode: (org)Top.).  As backend they use the 'debbugs' Emacs library
 * Mail Command Index::          Debbugs control mailserver commands.
 
 
-File: docuJNutD.info,  Node: Retrieving Bugs,  Next: Searching Bugs,  Prev: Top,  Up: Top
+File: docIBHnC1.info,  Node: Retrieving Bugs,  Next: Searching Bugs,  Prev: Top,  Up: Top
 
 1 Retrieving Bugs
 *****************
+
+1.1 Asynchronous Work
+=====================
+
+The access to the GNU Debbugs server happens via a SOAP interface.  This
+can be slow, especially, when a large number of bugs must be retrieved,
+or an extensive search is applied.  If Emacs is compiled with threading
+support, this work is performed by a thread.  During the bug retrieval,
+it is still possible to continue the work with Emacs then.
+
+   After the bug retrieval is finished, a respective message will appear
+in the minibuffer.
+
+ -- Command: debbugs-gnu-show-last-result
+
+     This command switches the current buffer to the recent buffer
+     containing bug reports.  It is useful to bind this command to a
+     function key in your '.emacs' file, like
+
+          (keymap-global-set "<f5>" 'debbugs-gnu-show-last-result)
+
+ -- User Option: debbugs-gnu-use-threads
+
+     The user option 'debbugs-gnu-use-threads', when set to 'nil',
+     disables threaded bug retrieval, and synchronous bug retrieval is
+     performed.  Threaded bug retrieval is also suppressed if the number
+     of bugs to be retrieved is known in advance, and it is smaller than
+     the user option 'debbugs-gnu-use-threads-lower-limit'.
+
+1.2 Basic Commands
+==================
 
 Bugs are retrieved by the 'debbugs-gnu' or 'debbugs-org' commands.  In
 their simple version, they retrieve just bugs for the '"emacs"' package
@@ -157,6 +188,10 @@ predefined filter.
      A default value for interactive use can be configured in the user
      option 'debbugs-gnu-default-bug-number-list'.
 
+     When the number of bugs is smaller than the user option
+     'debbugs-gnu-use-threads-lower-limit', the bug retrieval is
+     performed synchronously.
+
      *note Presenting Bugs:: for the presentation of the results.
 
  -- Command: debbugs-gnu-patches
@@ -175,6 +210,10 @@ predefined filter.
      The commands 'debbugs-gnu-tagged' and 'debbugs-org-tagged' show all
      bugs tagged locally.  This list is useful for keeping track of bugs
      you are currently working on.
+
+     When the number of tagged bugs is smaller than the user option
+     'debbugs-gnu-use-threads-lower-limit', the bug retrieval is
+     performed synchronously.
 
      *note Presenting Bugs:: for the presentation of the results.
 
@@ -203,11 +242,12 @@ predefined filter.
 
  -- User Option: debbugs-show-progress
 
-     If this user option is non-'nil', a progress report is shown when
-     retrieving bugs, defaults to t.
+     If the bug retrieval happens synchronously, and this user option is
+     non-'nil', a progress report is shown when retrieving bugs.  It
+     defaults to 't'.
 
 
-File: docuJNutD.info,  Node: Searching Bugs,  Next: Presenting Bugs,  Prev: Retrieving Bugs,  Up: Top
+File: docIBHnC1.info,  Node: Searching Bugs,  Next: Presenting Bugs,  Prev: Retrieving Bugs,  Up: Top
 
 2 Searching in the Debbugs Database
 ***********************************
@@ -215,7 +255,7 @@ File: docuJNutD.info,  Node: Searching Bugs,  Next: Presenting Bugs,  Prev: Retr
 The GNU Debbugs server allows searching the text of the messages
 submitted to the bugs in the database.  It uses a HyperEstraier based
 search engine
-(https://fallabs.com/hyperestraier/uguide-en.html#searchcond)(1).
+(https://dbmx.net/hyperestraier/uguide-en.html#searchcond)(1).
 
    The search engine uses an index over the bug database.  This index is
 refreshed daily; search hits may not include recent changes made the
@@ -334,7 +374,8 @@ same day.
      can be applied only after all bugs have been downloaded.
 
      These commands show also a progress report when
-     'debbugs-show-progress' is non-'nil'.
+     'debbugs-show-progress' is non-'nil' and the bug retrieval is
+     performed synchronously.
 
  -- Command: debbugs-gnu-guix-search
  -- Command: debbugs-org-guix-search
@@ -353,7 +394,7 @@ Debbugs server only.
 are not supported.
 
 
-File: docuJNutD.info,  Node: Presenting Bugs,  Next: Minor Mode,  Prev: Searching Bugs,  Up: Top
+File: docIBHnC1.info,  Node: Presenting Bugs,  Next: Minor Mode,  Prev: Searching Bugs,  Up: Top
 
 3 Presenting Bugs
 *****************
@@ -372,7 +413,7 @@ tabulated list, and 'debbugs-org-*' displays a list of TODO items in
 * Posting Patches::             Posting Patches to Debbugs from the Emacs Repository.
 
 
-File: docuJNutD.info,  Node: Tabulated Lists,  Next: TODO Items,  Up: Presenting Bugs
+File: docIBHnC1.info,  Node: Tabulated Lists,  Next: TODO Items,  Up: Presenting Bugs
 
 3.1 Tabulated Lists
 ===================
@@ -484,7 +525,7 @@ that bug will be shown; if its value is 'rmail', the command will
 present an Rmail folder instead.
 
 
-File: docuJNutD.info,  Node: TODO Items,  Next: Control Messages,  Prev: Tabulated Lists,  Up: Presenting Bugs
+File: docIBHnC1.info,  Node: TODO Items,  Next: Control Messages,  Prev: Tabulated Lists,  Up: Presenting Bugs
 
 3.2 TODO Items
 ==============
@@ -523,7 +564,7 @@ This enables the following key strokes:
 same meaning as in *note Tabulated Lists::.
 
 
-File: docuJNutD.info,  Node: Control Messages,  Next: Applying Patches,  Prev: TODO Items,  Up: Presenting Bugs
+File: docIBHnC1.info,  Node: Control Messages,  Next: Applying Patches,  Prev: TODO Items,  Up: Presenting Bugs
 
 3.3 Control Messages
 ====================
@@ -665,7 +706,7 @@ be inconvenient, for example when an external interactive mail client is
 configured.
 
 
-File: docuJNutD.info,  Node: Applying Patches,  Next: Posting Patches,  Prev: Control Messages,  Up: Presenting Bugs
+File: docIBHnC1.info,  Node: Applying Patches,  Next: Posting Patches,  Prev: Control Messages,  Up: Presenting Bugs
 
 3.4 Applying Patches in the Emacs Repository
 ============================================
@@ -703,7 +744,7 @@ you hit 'M-m' in the GNUS ephemeral group.  Note that the rest of the
 workflow described above is not yet supported.
 
 
-File: docuJNutD.info,  Node: Posting Patches,  Prev: Applying Patches,  Up: Presenting Bugs
+File: docIBHnC1.info,  Node: Posting Patches,  Prev: Applying Patches,  Up: Presenting Bugs
 
 3.5 Posting Patches to Debbugs from the Emacs Repository
 ========================================================
@@ -759,7 +800,7 @@ configured for the GNU Emacs and GNU ELPA repositories, more entries may
 be added to work with other repositories of other packages.
 
 
-File: docuJNutD.info,  Node: Minor Mode,  Next: Command Index,  Prev: Presenting Bugs,  Up: Top
+File: docIBHnC1.info,  Node: Minor Mode,  Next: Command Index,  Prev: Presenting Bugs,  Up: Top
 
 4 Minor Mode
 ************
@@ -795,7 +836,7 @@ you might set:
      (add-hook 'gnus-article-mode-hook 'bug-reference-mode)
 
 
-File: docuJNutD.info,  Node: Command Index,  Next: Variable Index,  Prev: Minor Mode,  Up: Top
+File: docIBHnC1.info,  Node: Command Index,  Next: Variable Index,  Prev: Minor Mode,  Up: Top
 
 Command Index
 *************
@@ -804,29 +845,30 @@ Command Index
 * Menu:
 
 * debbugs-browse-mode:                   Minor Mode.          (line  12)
-* debbugs-gnu:                           Retrieving Bugs.     (line  20)
-* debbugs-gnu-bugs:                      Retrieving Bugs.     (line  84)
+* debbugs-gnu:                           Retrieving Bugs.     (line  51)
+* debbugs-gnu-bugs:                      Retrieving Bugs.     (line 115)
 * debbugs-gnu-emacs-release-blocking-reports: Retrieving Bugs.
-                                                              (line 130)
-* debbugs-gnu-guix-search:               Searching Bugs.      (line 130)
-* debbugs-gnu-my-open-bugs:              Retrieving Bugs.     (line 120)
-* debbugs-gnu-package:                   Retrieving Bugs.     (line  72)
-* debbugs-gnu-patches:                   Retrieving Bugs.     (line 101)
+                                                              (line 169)
+* debbugs-gnu-guix-search:               Searching Bugs.      (line 131)
+* debbugs-gnu-my-open-bugs:              Retrieving Bugs.     (line 159)
+* debbugs-gnu-package:                   Retrieving Bugs.     (line 103)
+* debbugs-gnu-patches:                   Retrieving Bugs.     (line 136)
 * debbugs-gnu-pick-commits:              Posting Patches.     (line  16)
 * debbugs-gnu-search:                    Searching Bugs.      (line  15)
-* debbugs-gnu-tagged:                    Retrieving Bugs.     (line 111)
-* debbugs-org:                           Retrieving Bugs.     (line  22)
-* debbugs-org-bugs:                      Retrieving Bugs.     (line  85)
+* debbugs-gnu-show-last-result:          Retrieving Bugs.     (line  18)
+* debbugs-gnu-tagged:                    Retrieving Bugs.     (line 146)
+* debbugs-org:                           Retrieving Bugs.     (line  53)
+* debbugs-org-bugs:                      Retrieving Bugs.     (line 116)
 * debbugs-org-emacs-release-blocking-reports: Retrieving Bugs.
-                                                              (line 132)
-* debbugs-org-guix-search:               Searching Bugs.      (line 131)
-* debbugs-org-my-open-bugs:              Retrieving Bugs.     (line 121)
-* debbugs-org-patches:                   Retrieving Bugs.     (line 102)
+                                                              (line 171)
+* debbugs-org-guix-search:               Searching Bugs.      (line 132)
+* debbugs-org-my-open-bugs:              Retrieving Bugs.     (line 160)
+* debbugs-org-patches:                   Retrieving Bugs.     (line 137)
 * debbugs-org-search:                    Searching Bugs.      (line  16)
-* debbugs-org-tagged:                    Retrieving Bugs.     (line 112)
+* debbugs-org-tagged:                    Retrieving Bugs.     (line 147)
 
 
-File: docuJNutD.info,  Node: Variable Index,  Next: Key Index,  Prev: Command Index,  Up: Top
+File: docIBHnC1.info,  Node: Variable Index,  Next: Key Index,  Prev: Command Index,  Up: Top
 
 Variable Index
 **************
@@ -835,16 +877,16 @@ Variable Index
 * Menu:
 
 * debbugs-browse-function:               Minor Mode.          (line  12)
-* debbugs-gnu-all-packages:              Retrieving Bugs.     (line  41)
-* debbugs-gnu-all-severities:            Retrieving Bugs.     (line  32)
+* debbugs-gnu-all-packages:              Retrieving Bugs.     (line  72)
+* debbugs-gnu-all-severities:            Retrieving Bugs.     (line  63)
 * debbugs-gnu-apply-patch-prefers-magit: Applying Patches.    (line  33)
 * debbugs-gnu-branch-directory:          Applying Patches.    (line  22)
 * debbugs-gnu-commit-description-format: Posting Patches.     (line  47)
 * debbugs-gnu-compile-command:           Applying Patches.    (line  18)
-* debbugs-gnu-default-bug-number-list:   Retrieving Bugs.     (line  96)
-* debbugs-gnu-default-packages:          Retrieving Bugs.     (line  66)
-* debbugs-gnu-default-severities:        Retrieving Bugs.     (line  66)
-* debbugs-gnu-default-suppress-bugs:     Retrieving Bugs.     (line  49)
+* debbugs-gnu-default-bug-number-list:   Retrieving Bugs.     (line 127)
+* debbugs-gnu-default-packages:          Retrieving Bugs.     (line  97)
+* debbugs-gnu-default-severities:        Retrieving Bugs.     (line  97)
+* debbugs-gnu-default-suppress-bugs:     Retrieving Bugs.     (line  80)
 * debbugs-gnu-git-remote-info-alist:     Posting Patches.     (line  47)
 * debbugs-gnu-mail-backend:              Tabulated Lists.     (line 106)
 * debbugs-gnu-persistency-file:          Tabulated Lists.     (line 100)
@@ -852,11 +894,13 @@ Variable Index
 * debbugs-gnu-send-mail-function:        Control Messages.    (line 136)
 * debbugs-gnu-suppress-closed:           Tabulated Lists.     (line 103)
 * debbugs-gnu-trunk-directory:           Applying Patches.    (line  22)
+* debbugs-gnu-use-threads:               Retrieving Bugs.     (line  26)
+* debbugs-gnu-use-threads-lower-limit:   Retrieving Bugs.     (line  28)
 * debbugs-org-severity-priority:         TODO Items.          (line  10)
-* debbugs-show-progress:                 Retrieving Bugs.     (line 143)
+* debbugs-show-progress:                 Retrieving Bugs.     (line 182)
 
 
-File: docuJNutD.info,  Node: Key Index,  Next: Mail Command Index,  Prev: Variable Index,  Up: Top
+File: docIBHnC1.info,  Node: Key Index,  Next: Mail Command Index,  Prev: Variable Index,  Up: Top
 
 Key Index
 *********
@@ -876,6 +920,7 @@ Key Index
 * C-c # t:                               TODO Items.          (line  22)
 * d:                                     Tabulated Lists.     (line  43)
 * E:                                     Tabulated Lists.     (line  88)
+* f5:                                    Retrieving Bugs.     (line  24)
 * g:                                     Tabulated Lists.     (line  62)
 * m:                                     Tabulated Lists.     (line  78)
 * M-m:                                   Applying Patches.    (line  10)
@@ -891,7 +936,7 @@ Key Index
 * x:                                     Tabulated Lists.     (line  81)
 
 
-File: docuJNutD.info,  Node: Mail Command Index,  Prev: Key Index,  Up: Top
+File: docIBHnC1.info,  Node: Mail Command Index,  Prev: Key Index,  Up: Top
 
 Debbugs control mailserver commands
 ***********************************
@@ -1232,52 +1277,52 @@ Debbugs control mailserver commands
 Tag Table:
 Node: Top1091
 Node: Retrieving Bugs2698
-Node: Searching Bugs9133
-Ref: Searching Bugs-Footnote-114199
-Ref: Searching Bugs-Footnote-214287
-Node: Presenting Bugs14378
-Node: Tabulated Lists15043
-Node: TODO Items19918
-Node: Control Messages21325
-Node: Applying Patches24968
-Node: Posting Patches26770
-Node: Minor Mode29816
-Node: Command Index31297
-Node: Variable Index32959
-Node: Key Index34569
-Node: Mail Command Index36539
-Ref: Mail Command Index: reassign36691
-Ref: Mail Command Index: reopen37452
-Ref: Mail Command Index: found38606
-Ref: Mail Command Index: notfound39687
-Ref: Mail Command Index: fixed40096
-Ref: Mail Command Index: notfixed40537
-Ref: Mail Command Index: submitter41155
-Ref: Mail Command Index: forwarded41549
-Ref: Mail Command Index: notforwarded42162
-Ref: Mail Command Index: retitle42363
-Ref: Mail Command Index: severity42747
-Ref: Mail Command Index: clone43078
-Ref: Mail Command Index: merge43843
-Ref: Mail Command Index: forcemerge45230
-Ref: Mail Command Index: unmerge45674
-Ref: Mail Command Index: tags46377
-Ref: Mail Command Index: block47443
-Ref: Mail Command Index: unblock47480
-Ref: Mail Command Index: close47966
-Ref: Mail Command Index: package48616
-Ref: Mail Command Index: owner49223
-Ref: Mail Command Index: noowner49586
-Ref: Mail Command Index: archive49759
-Ref: Mail Command Index: unarchive49900
-Ref: Mail Command Index: #50194
-Ref: Mail Command Index: quit50454
-Ref: Mail Command Index: stop50461
-Ref: Mail Command Index: thank50468
-Ref: Mail Command Index: thanks50476
-Ref: Mail Command Index: thankyou50485
-Ref: Mail Command Index: thank you50496
-Ref: Mail Command Index: --50508
+Node: Searching Bugs10717
+Ref: Searching Bugs-Footnote-115834
+Ref: Searching Bugs-Footnote-215922
+Node: Presenting Bugs16013
+Node: Tabulated Lists16678
+Node: TODO Items21553
+Node: Control Messages22960
+Node: Applying Patches26603
+Node: Posting Patches28405
+Node: Minor Mode31451
+Node: Command Index32932
+Node: Variable Index34667
+Node: Key Index36423
+Node: Mail Command Index38466
+Ref: Mail Command Index: reassign38618
+Ref: Mail Command Index: reopen39379
+Ref: Mail Command Index: found40533
+Ref: Mail Command Index: notfound41614
+Ref: Mail Command Index: fixed42023
+Ref: Mail Command Index: notfixed42464
+Ref: Mail Command Index: submitter43082
+Ref: Mail Command Index: forwarded43476
+Ref: Mail Command Index: notforwarded44089
+Ref: Mail Command Index: retitle44290
+Ref: Mail Command Index: severity44674
+Ref: Mail Command Index: clone45005
+Ref: Mail Command Index: merge45770
+Ref: Mail Command Index: forcemerge47157
+Ref: Mail Command Index: unmerge47601
+Ref: Mail Command Index: tags48304
+Ref: Mail Command Index: block49370
+Ref: Mail Command Index: unblock49407
+Ref: Mail Command Index: close49893
+Ref: Mail Command Index: package50543
+Ref: Mail Command Index: owner51150
+Ref: Mail Command Index: noowner51513
+Ref: Mail Command Index: archive51686
+Ref: Mail Command Index: unarchive51827
+Ref: Mail Command Index: #52121
+Ref: Mail Command Index: quit52381
+Ref: Mail Command Index: stop52388
+Ref: Mail Command Index: thank52395
+Ref: Mail Command Index: thanks52403
+Ref: Mail Command Index: thankyou52412
+Ref: Mail Command Index: thank you52423
+Ref: Mail Command Index: --52435
 
 End Tag Table
 
