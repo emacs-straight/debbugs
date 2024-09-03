@@ -1,4 +1,4 @@
-This is docIBHnC1.info, produced by makeinfo version 6.8 from
+This is docrfQdA3.info, produced by makeinfo version 6.8 from
 debbugs-ug.texi.
 
 Copyright (C) 2015-2024 Free Software Foundation, Inc.
@@ -24,7 +24,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docIBHnC1.info,  Node: Top,  Next: Retrieving Bugs,  Up: (dir)
+File: docrfQdA3.info,  Node: Top,  Next: Retrieving Bugs,  Up: (dir)
 
 Debbugs User Guide
 ******************
@@ -59,7 +59,7 @@ Mode: (org)Top.).  As backend they use the 'debbugs' Emacs library
 * Mail Command Index::          Debbugs control mailserver commands.
 
 
-File: docIBHnC1.info,  Node: Retrieving Bugs,  Next: Searching Bugs,  Prev: Top,  Up: Top
+File: docrfQdA3.info,  Node: Retrieving Bugs,  Next: Searching Bugs,  Prev: Top,  Up: Top
 
 1 Retrieving Bugs
 *****************
@@ -91,6 +91,8 @@ in the minibuffer.
      performed.  Threaded bug retrieval is also suppressed if the number
      of bugs to be retrieved is known in advance, and it is smaller than
      the user option 'debbugs-gnu-use-threads-lower-limit'.
+
+     'debbugs-org-use-threads' an alias of this user option.
 
 1.2 Basic Commands
 ==================
@@ -247,7 +249,7 @@ predefined filter.
      defaults to 't'.
 
 
-File: docIBHnC1.info,  Node: Searching Bugs,  Next: Presenting Bugs,  Prev: Retrieving Bugs,  Up: Top
+File: docrfQdA3.info,  Node: Searching Bugs,  Next: Presenting Bugs,  Prev: Retrieving Bugs,  Up: Top
 
 2 Searching in the Debbugs Database
 ***********************************
@@ -394,7 +396,7 @@ Debbugs server only.
 are not supported.
 
 
-File: docIBHnC1.info,  Node: Presenting Bugs,  Next: Minor Mode,  Prev: Searching Bugs,  Up: Top
+File: docrfQdA3.info,  Node: Presenting Bugs,  Next: Minor Mode,  Prev: Searching Bugs,  Up: Top
 
 3 Presenting Bugs
 *****************
@@ -413,7 +415,7 @@ tabulated list, and 'debbugs-org-*' displays a list of TODO items in
 * Posting Patches::             Posting Patches to Debbugs from the Emacs Repository.
 
 
-File: docIBHnC1.info,  Node: Tabulated Lists,  Next: TODO Items,  Up: Presenting Bugs
+File: docrfQdA3.info,  Node: Tabulated Lists,  Next: TODO Items,  Up: Presenting Bugs
 
 3.1 Tabulated Lists
 ===================
@@ -525,7 +527,7 @@ that bug will be shown; if its value is 'rmail', the command will
 present an Rmail folder instead.
 
 
-File: docIBHnC1.info,  Node: TODO Items,  Next: Control Messages,  Prev: Tabulated Lists,  Up: Presenting Bugs
+File: docrfQdA3.info,  Node: TODO Items,  Next: Control Messages,  Prev: Tabulated Lists,  Up: Presenting Bugs
 
 3.2 TODO Items
 ==============
@@ -564,7 +566,7 @@ This enables the following key strokes:
 same meaning as in *note Tabulated Lists::.
 
 
-File: docIBHnC1.info,  Node: Control Messages,  Next: Applying Patches,  Prev: TODO Items,  Up: Presenting Bugs
+File: docrfQdA3.info,  Node: Control Messages,  Next: Applying Patches,  Prev: TODO Items,  Up: Presenting Bugs
 
 3.3 Control Messages
 ====================
@@ -706,7 +708,7 @@ be inconvenient, for example when an external interactive mail client is
 configured.
 
 
-File: docIBHnC1.info,  Node: Applying Patches,  Next: Posting Patches,  Prev: Control Messages,  Up: Presenting Bugs
+File: docrfQdA3.info,  Node: Applying Patches,  Next: Posting Patches,  Prev: Control Messages,  Up: Presenting Bugs
 
 3.4 Applying Patches in the Emacs Repository
 ============================================
@@ -744,7 +746,7 @@ you hit 'M-m' in the GNUS ephemeral group.  Note that the rest of the
 workflow described above is not yet supported.
 
 
-File: docIBHnC1.info,  Node: Posting Patches,  Prev: Applying Patches,  Up: Presenting Bugs
+File: docrfQdA3.info,  Node: Posting Patches,  Prev: Applying Patches,  Up: Presenting Bugs
 
 3.5 Posting Patches to Debbugs from the Emacs Repository
 ========================================================
@@ -800,7 +802,7 @@ configured for the GNU Emacs and GNU ELPA repositories, more entries may
 be added to work with other repositories of other packages.
 
 
-File: docIBHnC1.info,  Node: Minor Mode,  Next: Command Index,  Prev: Presenting Bugs,  Up: Top
+File: docrfQdA3.info,  Node: Minor Mode,  Next: Command Index,  Prev: Presenting Bugs,  Up: Top
 
 4 Minor Mode
 ************
@@ -836,7 +838,7 @@ you might set:
      (add-hook 'gnus-article-mode-hook 'bug-reference-mode)
 
 
-File: docIBHnC1.info,  Node: Command Index,  Next: Variable Index,  Prev: Minor Mode,  Up: Top
+File: docrfQdA3.info,  Node: Command Index,  Next: Variable Index,  Prev: Minor Mode,  Up: Top
 
 Command Index
 *************
@@ -845,30 +847,30 @@ Command Index
 * Menu:
 
 * debbugs-browse-mode:                   Minor Mode.          (line  12)
-* debbugs-gnu:                           Retrieving Bugs.     (line  51)
-* debbugs-gnu-bugs:                      Retrieving Bugs.     (line 115)
+* debbugs-gnu:                           Retrieving Bugs.     (line  53)
+* debbugs-gnu-bugs:                      Retrieving Bugs.     (line 117)
 * debbugs-gnu-emacs-release-blocking-reports: Retrieving Bugs.
-                                                              (line 169)
+                                                              (line 171)
 * debbugs-gnu-guix-search:               Searching Bugs.      (line 131)
-* debbugs-gnu-my-open-bugs:              Retrieving Bugs.     (line 159)
-* debbugs-gnu-package:                   Retrieving Bugs.     (line 103)
-* debbugs-gnu-patches:                   Retrieving Bugs.     (line 136)
+* debbugs-gnu-my-open-bugs:              Retrieving Bugs.     (line 161)
+* debbugs-gnu-package:                   Retrieving Bugs.     (line 105)
+* debbugs-gnu-patches:                   Retrieving Bugs.     (line 138)
 * debbugs-gnu-pick-commits:              Posting Patches.     (line  16)
 * debbugs-gnu-search:                    Searching Bugs.      (line  15)
 * debbugs-gnu-show-last-result:          Retrieving Bugs.     (line  18)
-* debbugs-gnu-tagged:                    Retrieving Bugs.     (line 146)
-* debbugs-org:                           Retrieving Bugs.     (line  53)
-* debbugs-org-bugs:                      Retrieving Bugs.     (line 116)
+* debbugs-gnu-tagged:                    Retrieving Bugs.     (line 148)
+* debbugs-org:                           Retrieving Bugs.     (line  55)
+* debbugs-org-bugs:                      Retrieving Bugs.     (line 118)
 * debbugs-org-emacs-release-blocking-reports: Retrieving Bugs.
-                                                              (line 171)
+                                                              (line 173)
 * debbugs-org-guix-search:               Searching Bugs.      (line 132)
-* debbugs-org-my-open-bugs:              Retrieving Bugs.     (line 160)
-* debbugs-org-patches:                   Retrieving Bugs.     (line 137)
+* debbugs-org-my-open-bugs:              Retrieving Bugs.     (line 162)
+* debbugs-org-patches:                   Retrieving Bugs.     (line 139)
 * debbugs-org-search:                    Searching Bugs.      (line  16)
-* debbugs-org-tagged:                    Retrieving Bugs.     (line 147)
+* debbugs-org-tagged:                    Retrieving Bugs.     (line 149)
 
 
-File: docIBHnC1.info,  Node: Variable Index,  Next: Key Index,  Prev: Command Index,  Up: Top
+File: docrfQdA3.info,  Node: Variable Index,  Next: Key Index,  Prev: Command Index,  Up: Top
 
 Variable Index
 **************
@@ -877,16 +879,16 @@ Variable Index
 * Menu:
 
 * debbugs-browse-function:               Minor Mode.          (line  12)
-* debbugs-gnu-all-packages:              Retrieving Bugs.     (line  72)
-* debbugs-gnu-all-severities:            Retrieving Bugs.     (line  63)
+* debbugs-gnu-all-packages:              Retrieving Bugs.     (line  74)
+* debbugs-gnu-all-severities:            Retrieving Bugs.     (line  65)
 * debbugs-gnu-apply-patch-prefers-magit: Applying Patches.    (line  33)
 * debbugs-gnu-branch-directory:          Applying Patches.    (line  22)
 * debbugs-gnu-commit-description-format: Posting Patches.     (line  47)
 * debbugs-gnu-compile-command:           Applying Patches.    (line  18)
-* debbugs-gnu-default-bug-number-list:   Retrieving Bugs.     (line 127)
-* debbugs-gnu-default-packages:          Retrieving Bugs.     (line  97)
-* debbugs-gnu-default-severities:        Retrieving Bugs.     (line  97)
-* debbugs-gnu-default-suppress-bugs:     Retrieving Bugs.     (line  80)
+* debbugs-gnu-default-bug-number-list:   Retrieving Bugs.     (line 129)
+* debbugs-gnu-default-packages:          Retrieving Bugs.     (line  99)
+* debbugs-gnu-default-severities:        Retrieving Bugs.     (line  99)
+* debbugs-gnu-default-suppress-bugs:     Retrieving Bugs.     (line  82)
 * debbugs-gnu-git-remote-info-alist:     Posting Patches.     (line  47)
 * debbugs-gnu-mail-backend:              Tabulated Lists.     (line 106)
 * debbugs-gnu-persistency-file:          Tabulated Lists.     (line 100)
@@ -897,10 +899,11 @@ Variable Index
 * debbugs-gnu-use-threads:               Retrieving Bugs.     (line  26)
 * debbugs-gnu-use-threads-lower-limit:   Retrieving Bugs.     (line  28)
 * debbugs-org-severity-priority:         TODO Items.          (line  10)
-* debbugs-show-progress:                 Retrieving Bugs.     (line 182)
+* debbugs-org-use-threads:               Retrieving Bugs.     (line  34)
+* debbugs-show-progress:                 Retrieving Bugs.     (line 184)
 
 
-File: docIBHnC1.info,  Node: Key Index,  Next: Mail Command Index,  Prev: Variable Index,  Up: Top
+File: docrfQdA3.info,  Node: Key Index,  Next: Mail Command Index,  Prev: Variable Index,  Up: Top
 
 Key Index
 *********
@@ -936,7 +939,7 @@ Key Index
 * x:                                     Tabulated Lists.     (line  81)
 
 
-File: docIBHnC1.info,  Node: Mail Command Index,  Prev: Key Index,  Up: Top
+File: docrfQdA3.info,  Node: Mail Command Index,  Prev: Key Index,  Up: Top
 
 Debbugs control mailserver commands
 ***********************************
@@ -1277,52 +1280,52 @@ Debbugs control mailserver commands
 Tag Table:
 Node: Top1091
 Node: Retrieving Bugs2698
-Node: Searching Bugs10717
-Ref: Searching Bugs-Footnote-115834
-Ref: Searching Bugs-Footnote-215922
-Node: Presenting Bugs16013
-Node: Tabulated Lists16678
-Node: TODO Items21553
-Node: Control Messages22960
-Node: Applying Patches26603
-Node: Posting Patches28405
-Node: Minor Mode31451
-Node: Command Index32932
-Node: Variable Index34667
-Node: Key Index36423
-Node: Mail Command Index38466
-Ref: Mail Command Index: reassign38618
-Ref: Mail Command Index: reopen39379
-Ref: Mail Command Index: found40533
-Ref: Mail Command Index: notfound41614
-Ref: Mail Command Index: fixed42023
-Ref: Mail Command Index: notfixed42464
-Ref: Mail Command Index: submitter43082
-Ref: Mail Command Index: forwarded43476
-Ref: Mail Command Index: notforwarded44089
-Ref: Mail Command Index: retitle44290
-Ref: Mail Command Index: severity44674
-Ref: Mail Command Index: clone45005
-Ref: Mail Command Index: merge45770
-Ref: Mail Command Index: forcemerge47157
-Ref: Mail Command Index: unmerge47601
-Ref: Mail Command Index: tags48304
-Ref: Mail Command Index: block49370
-Ref: Mail Command Index: unblock49407
-Ref: Mail Command Index: close49893
-Ref: Mail Command Index: package50543
-Ref: Mail Command Index: owner51150
-Ref: Mail Command Index: noowner51513
-Ref: Mail Command Index: archive51686
-Ref: Mail Command Index: unarchive51827
-Ref: Mail Command Index: #52121
-Ref: Mail Command Index: quit52381
-Ref: Mail Command Index: stop52388
-Ref: Mail Command Index: thank52395
-Ref: Mail Command Index: thanks52403
-Ref: Mail Command Index: thankyou52412
-Ref: Mail Command Index: thank you52423
-Ref: Mail Command Index: --52435
+Node: Searching Bugs10779
+Ref: Searching Bugs-Footnote-115896
+Ref: Searching Bugs-Footnote-215984
+Node: Presenting Bugs16075
+Node: Tabulated Lists16740
+Node: TODO Items21615
+Node: Control Messages23022
+Node: Applying Patches26665
+Node: Posting Patches28467
+Node: Minor Mode31513
+Node: Command Index32994
+Node: Variable Index34729
+Node: Key Index36558
+Node: Mail Command Index38601
+Ref: Mail Command Index: reassign38753
+Ref: Mail Command Index: reopen39514
+Ref: Mail Command Index: found40668
+Ref: Mail Command Index: notfound41749
+Ref: Mail Command Index: fixed42158
+Ref: Mail Command Index: notfixed42599
+Ref: Mail Command Index: submitter43217
+Ref: Mail Command Index: forwarded43611
+Ref: Mail Command Index: notforwarded44224
+Ref: Mail Command Index: retitle44425
+Ref: Mail Command Index: severity44809
+Ref: Mail Command Index: clone45140
+Ref: Mail Command Index: merge45905
+Ref: Mail Command Index: forcemerge47292
+Ref: Mail Command Index: unmerge47736
+Ref: Mail Command Index: tags48439
+Ref: Mail Command Index: block49505
+Ref: Mail Command Index: unblock49542
+Ref: Mail Command Index: close50028
+Ref: Mail Command Index: package50678
+Ref: Mail Command Index: owner51285
+Ref: Mail Command Index: noowner51648
+Ref: Mail Command Index: archive51821
+Ref: Mail Command Index: unarchive51962
+Ref: Mail Command Index: #52256
+Ref: Mail Command Index: quit52516
+Ref: Mail Command Index: stop52523
+Ref: Mail Command Index: thank52530
+Ref: Mail Command Index: thanks52538
+Ref: Mail Command Index: thankyou52547
+Ref: Mail Command Index: thank you52558
+Ref: Mail Command Index: --52570
 
 End Tag Table
 
