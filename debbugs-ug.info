@@ -1,4 +1,4 @@
-This is docYeAbKs.info, produced by makeinfo version 6.8 from
+This is docXEqWBG.info, produced by makeinfo version 6.8 from
 debbugs-ug.texi.
 
 Copyright (C) 2015-2024 Free Software Foundation, Inc.
@@ -24,7 +24,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docYeAbKs.info,  Node: Top,  Next: Retrieving Bugs,  Up: (dir)
+File: docXEqWBG.info,  Node: Top,  Next: Retrieving Bugs,  Up: (dir)
 
 Debbugs User Guide
 ******************
@@ -59,7 +59,7 @@ Mode: (org)Top.).  As backend they use the 'debbugs' Emacs library
 * Mail Command Index::          Debbugs control mailserver commands.
 
 
-File: docYeAbKs.info,  Node: Retrieving Bugs,  Next: Searching Bugs,  Prev: Top,  Up: Top
+File: docXEqWBG.info,  Node: Retrieving Bugs,  Next: Searching Bugs,  Prev: Top,  Up: Top
 
 1 Retrieving Bugs
 *****************
@@ -251,7 +251,7 @@ predefined filter.
      defaults to 't'.
 
 
-File: docYeAbKs.info,  Node: Searching Bugs,  Next: Presenting Bugs,  Prev: Retrieving Bugs,  Up: Top
+File: docXEqWBG.info,  Node: Searching Bugs,  Next: Presenting Bugs,  Prev: Retrieving Bugs,  Up: Top
 
 2 Searching in the Debbugs Database
 ***********************************
@@ -404,7 +404,7 @@ Debbugs server only.
 are not supported.
 
 
-File: docYeAbKs.info,  Node: Presenting Bugs,  Next: Minor Mode,  Prev: Searching Bugs,  Up: Top
+File: docXEqWBG.info,  Node: Presenting Bugs,  Next: Minor Mode,  Prev: Searching Bugs,  Up: Top
 
 3 Presenting Bugs
 *****************
@@ -423,7 +423,7 @@ tabulated list, and 'debbugs-org-*' displays a list of TODO items in
 * Posting Patches::             Posting Patches to Debbugs from the Emacs Repository.
 
 
-File: docYeAbKs.info,  Node: Tabulated Lists,  Next: TODO Items,  Up: Presenting Bugs
+File: docXEqWBG.info,  Node: Tabulated Lists,  Next: TODO Items,  Up: Presenting Bugs
 
 3.1 Tabulated Lists
 ===================
@@ -433,6 +433,11 @@ entry: 'Id' (the bug number), 'State' (some bug attributes), 'Submitter'
 (the name of the bug submitter), and 'Title' (the bug subject).  By
 default the bugs are sorted descending by 'Id'; this can be changed by
 clicking in the headline.
+
+   The width of the columns in the tabulated list are specified by the
+user options 'debbugs-gnu-width-id', 'debbugs-gnu-width-state',
+'debbugs-gnu-width-submitter', and 'debbugs-gnu-width-title',
+respectively.
 
    Different foreground colors represent further information on the bug
 report.  If the bug number uses a red color ('debbugs-gnu-tagged'), the
@@ -540,7 +545,7 @@ present an Rmail folder instead.
 your own posting-styles.
 
 
-File: docYeAbKs.info,  Node: TODO Items,  Next: Control Messages,  Prev: Tabulated Lists,  Up: Presenting Bugs
+File: docXEqWBG.info,  Node: TODO Items,  Next: Control Messages,  Prev: Tabulated Lists,  Up: Presenting Bugs
 
 3.2 TODO Items
 ==============
@@ -579,7 +584,7 @@ This enables the following key strokes:
 same meaning as in *note Tabulated Lists::.
 
 
-File: docYeAbKs.info,  Node: Control Messages,  Next: Applying Patches,  Prev: TODO Items,  Up: Presenting Bugs
+File: docXEqWBG.info,  Node: Control Messages,  Next: Applying Patches,  Prev: TODO Items,  Up: Presenting Bugs
 
 3.3 Control Messages
 ====================
@@ -721,7 +726,7 @@ be inconvenient, for example when an external interactive mail client is
 configured.
 
 
-File: docYeAbKs.info,  Node: Applying Patches,  Next: Posting Patches,  Prev: Control Messages,  Up: Presenting Bugs
+File: docXEqWBG.info,  Node: Applying Patches,  Next: Posting Patches,  Prev: Control Messages,  Up: Presenting Bugs
 
 3.4 Applying Patches in the Emacs Repository
 ============================================
@@ -759,7 +764,7 @@ you hit 'M-m' in the GNUS ephemeral group.  Note that the rest of the
 workflow described above is not yet supported.
 
 
-File: docYeAbKs.info,  Node: Posting Patches,  Prev: Applying Patches,  Up: Presenting Bugs
+File: docXEqWBG.info,  Node: Posting Patches,  Prev: Applying Patches,  Up: Presenting Bugs
 
 3.5 Posting Patches to Debbugs from the Emacs Repository
 ========================================================
@@ -815,7 +820,7 @@ configured for the GNU Emacs and GNU ELPA repositories, more entries may
 be added to work with other repositories of other packages.
 
 
-File: docYeAbKs.info,  Node: Minor Mode,  Next: Command Index,  Prev: Presenting Bugs,  Up: Top
+File: docXEqWBG.info,  Node: Minor Mode,  Next: Command Index,  Prev: Presenting Bugs,  Up: Top
 
 4 Minor Mode
 ************
@@ -851,7 +856,7 @@ you might set:
      (add-hook 'gnus-article-mode-hook 'bug-reference-mode)
 
 
-File: docYeAbKs.info,  Node: Command Index,  Next: Variable Index,  Prev: Minor Mode,  Up: Top
+File: docXEqWBG.info,  Node: Command Index,  Next: Variable Index,  Prev: Minor Mode,  Up: Top
 
 Command Index
 *************
@@ -884,7 +889,7 @@ Command Index
 * debbugs-org-tagged:                    Retrieving Bugs.     (line 151)
 
 
-File: docYeAbKs.info,  Node: Variable Index,  Next: Key Index,  Prev: Command Index,  Up: Top
+File: docXEqWBG.info,  Node: Variable Index,  Next: Key Index,  Prev: Command Index,  Up: Top
 
 Variable Index
 **************
@@ -904,12 +909,12 @@ Variable Index
 * debbugs-gnu-default-severities:        Retrieving Bugs.     (line 101)
 * debbugs-gnu-default-suppress-bugs:     Retrieving Bugs.     (line  84)
 * debbugs-gnu-git-remote-info-alist:     Posting Patches.     (line  47)
-* debbugs-gnu-mail-backend:              Tabulated Lists.     (line 106)
-* debbugs-gnu-persistency-file:          Tabulated Lists.     (line 100)
+* debbugs-gnu-mail-backend:              Tabulated Lists.     (line 111)
+* debbugs-gnu-persistency-file:          Tabulated Lists.     (line 105)
 * debbugs-gnu-read-commit-range-hook:    Posting Patches.     (line  11)
 * debbugs-gnu-send-mail-function:        Control Messages.    (line 136)
-* debbugs-gnu-summary-keep-posting-styles: Tabulated Lists.   (line 112)
-* debbugs-gnu-suppress-closed:           Tabulated Lists.     (line 103)
+* debbugs-gnu-summary-keep-posting-styles: Tabulated Lists.   (line 117)
+* debbugs-gnu-suppress-closed:           Tabulated Lists.     (line 108)
 * debbugs-gnu-trunk-directory:           Applying Patches.    (line  22)
 * debbugs-gnu-use-threads:               Retrieving Bugs.     (line  28)
 * debbugs-gnu-use-threads-lower-limit:   Retrieving Bugs.     (line  30)
@@ -918,7 +923,7 @@ Variable Index
 * debbugs-show-progress:                 Retrieving Bugs.     (line 186)
 
 
-File: docYeAbKs.info,  Node: Key Index,  Next: Mail Command Index,  Prev: Variable Index,  Up: Top
+File: docXEqWBG.info,  Node: Key Index,  Next: Mail Command Index,  Prev: Variable Index,  Up: Top
 
 Key Index
 *********
@@ -926,35 +931,35 @@ Key Index
  [index ]
 * Menu:
 
-* /:                                     Tabulated Lists.     (line  46)
-* A:                                     Tabulated Lists.     (line  38)
-* B:                                     Tabulated Lists.     (line  67)
-* b:                                     Tabulated Lists.     (line  68)
-* C:                                     Tabulated Lists.     (line  84)
+* /:                                     Tabulated Lists.     (line  51)
+* A:                                     Tabulated Lists.     (line  43)
+* B:                                     Tabulated Lists.     (line  72)
+* b:                                     Tabulated Lists.     (line  73)
+* C:                                     Tabulated Lists.     (line  89)
 * C-c # C:                               TODO Items.          (line  28)
 * C-c # d:                               TODO Items.          (line  19)
 * C-c # E:                               TODO Items.          (line  31)
 * C-c # m:                               TODO Items.          (line  25)
 * C-c # t:                               TODO Items.          (line  22)
-* d:                                     Tabulated Lists.     (line  43)
-* E:                                     Tabulated Lists.     (line  88)
+* d:                                     Tabulated Lists.     (line  48)
+* E:                                     Tabulated Lists.     (line  93)
 * f5:                                    Retrieving Bugs.     (line  24)
-* g:                                     Tabulated Lists.     (line  62)
-* m:                                     Tabulated Lists.     (line  78)
+* g:                                     Tabulated Lists.     (line  67)
+* m:                                     Tabulated Lists.     (line  83)
 * M-m:                                   Applying Patches.    (line  10)
-* <mouse-1>:                             Tabulated Lists.     (line  35)
-* <mouse-2>:                             Tabulated Lists.     (line  36)
-* R:                                     Tabulated Lists.     (line  52)
-* <RET>:                                 Tabulated Lists.     (line  34)
-* <RET> <1>:                             Tabulated Lists.     (line 106)
-* s:                                     Tabulated Lists.     (line  72)
-* t:                                     Tabulated Lists.     (line  75)
+* <mouse-1>:                             Tabulated Lists.     (line  40)
+* <mouse-2>:                             Tabulated Lists.     (line  41)
+* R:                                     Tabulated Lists.     (line  57)
+* <RET>:                                 Tabulated Lists.     (line  39)
+* <RET> <1>:                             Tabulated Lists.     (line 111)
+* s:                                     Tabulated Lists.     (line  77)
+* t:                                     Tabulated Lists.     (line  80)
 * <TAB>:                                 TODO Items.          (line  16)
-* w:                                     Tabulated Lists.     (line  59)
-* x:                                     Tabulated Lists.     (line  81)
+* w:                                     Tabulated Lists.     (line  64)
+* x:                                     Tabulated Lists.     (line  86)
 
 
-File: docYeAbKs.info,  Node: Mail Command Index,  Prev: Key Index,  Up: Top
+File: docXEqWBG.info,  Node: Mail Command Index,  Prev: Key Index,  Up: Top
 
 Debbugs control mailserver commands
 ***********************************
@@ -1300,47 +1305,47 @@ Ref: Searching Bugs-Footnote-116073
 Ref: Searching Bugs-Footnote-216161
 Node: Presenting Bugs16252
 Node: Tabulated Lists16917
-Node: TODO Items22018
-Node: Control Messages23425
-Node: Applying Patches27068
-Node: Posting Patches28870
-Node: Minor Mode31916
-Node: Command Index33397
-Node: Variable Index35205
-Node: Key Index37107
-Node: Mail Command Index39150
-Ref: Mail Command Index: reassign39302
-Ref: Mail Command Index: reopen40063
-Ref: Mail Command Index: found41217
-Ref: Mail Command Index: notfound42298
-Ref: Mail Command Index: fixed42707
-Ref: Mail Command Index: notfixed43148
-Ref: Mail Command Index: submitter43766
-Ref: Mail Command Index: forwarded44160
-Ref: Mail Command Index: notforwarded44773
-Ref: Mail Command Index: retitle44974
-Ref: Mail Command Index: severity45358
-Ref: Mail Command Index: clone45689
-Ref: Mail Command Index: merge46454
-Ref: Mail Command Index: forcemerge47841
-Ref: Mail Command Index: unmerge48285
-Ref: Mail Command Index: tags48988
-Ref: Mail Command Index: block50054
-Ref: Mail Command Index: unblock50091
-Ref: Mail Command Index: close50577
-Ref: Mail Command Index: package51227
-Ref: Mail Command Index: owner51834
-Ref: Mail Command Index: noowner52197
-Ref: Mail Command Index: archive52370
-Ref: Mail Command Index: unarchive52511
-Ref: Mail Command Index: #52805
-Ref: Mail Command Index: quit53065
-Ref: Mail Command Index: stop53072
-Ref: Mail Command Index: thank53079
-Ref: Mail Command Index: thanks53087
-Ref: Mail Command Index: thankyou53096
-Ref: Mail Command Index: thank you53107
-Ref: Mail Command Index: --53119
+Node: TODO Items22230
+Node: Control Messages23637
+Node: Applying Patches27280
+Node: Posting Patches29082
+Node: Minor Mode32128
+Node: Command Index33609
+Node: Variable Index35417
+Node: Key Index37319
+Node: Mail Command Index39362
+Ref: Mail Command Index: reassign39514
+Ref: Mail Command Index: reopen40275
+Ref: Mail Command Index: found41429
+Ref: Mail Command Index: notfound42510
+Ref: Mail Command Index: fixed42919
+Ref: Mail Command Index: notfixed43360
+Ref: Mail Command Index: submitter43978
+Ref: Mail Command Index: forwarded44372
+Ref: Mail Command Index: notforwarded44985
+Ref: Mail Command Index: retitle45186
+Ref: Mail Command Index: severity45570
+Ref: Mail Command Index: clone45901
+Ref: Mail Command Index: merge46666
+Ref: Mail Command Index: forcemerge48053
+Ref: Mail Command Index: unmerge48497
+Ref: Mail Command Index: tags49200
+Ref: Mail Command Index: block50266
+Ref: Mail Command Index: unblock50303
+Ref: Mail Command Index: close50789
+Ref: Mail Command Index: package51439
+Ref: Mail Command Index: owner52046
+Ref: Mail Command Index: noowner52409
+Ref: Mail Command Index: archive52582
+Ref: Mail Command Index: unarchive52723
+Ref: Mail Command Index: #53017
+Ref: Mail Command Index: quit53277
+Ref: Mail Command Index: stop53284
+Ref: Mail Command Index: thank53291
+Ref: Mail Command Index: thanks53299
+Ref: Mail Command Index: thankyou53308
+Ref: Mail Command Index: thank you53319
+Ref: Mail Command Index: --53331
 
 End Tag Table
 
