@@ -1,6 +1,6 @@
 ;;; debbugs-gnu.el --- interface for the GNU bug tracker  -*- lexical-binding:t -*-
 
-;; Copyright (C) 2011-2024 Free Software Foundation, Inc.
+;; Copyright (C) 2011-2025 Free Software Foundation, Inc.
 
 ;; Author: Lars Magne Ingebrigtsen <larsi@gnus.org>
 ;;         Michael Albinus <michael.albinus@gmx.de>
@@ -809,7 +809,9 @@ depend on PHRASE being a string, or nil.  See Info node
   "Which function to apply showing bug reports.
 Shall be bound in `debbugs-org-*' functions.")
 
-(defcustom debbugs-gnu-use-threads (and main-thread t)
+;; There is an error with threads on macOS.  (Bug#75280)
+(defcustom debbugs-gnu-use-threads
+  (and main-thread (not (eq system-type 'darwin)) t)
   "Whether to use threads when retrieving bugs.
 This doesn't apply when Emacs is compiled without threading support."
   :type 'boolean
@@ -1339,23 +1341,23 @@ Interactively, it is non-nil with the prefix argument."
   (debbugs-gnu nil))
 
 (defcustom debbugs-gnu-width-id 5
-  "The width of the \"Id\" column in the tabulated list"
-  :type 'integer
+  "The width of the \"Id\" column in the tabulated list."
+  :type 'natnum
   :version "30.1")
 
 (defcustom debbugs-gnu-width-state 10
-  "The width of the \"State\" column in the tabulated list"
-  :type 'integer
+  "The width of the \"State\" column in the tabulated list."
+  :type 'natnum
   :version "30.1")
 
 (defcustom debbugs-gnu-width-submitter 18
-  "The width of the \"Submitter\" column in the tabulated list"
-  :type 'integer
+  "The width of the \"Submitter\" column in the tabulated list."
+  :type 'natnum
   :version "30.1")
 
 (defcustom debbugs-gnu-width-title 10
-  "The width of the \"Title\" column in the tabulated list"
-  :type 'integer
+  "The width of the \"Title\" column in the tabulated list."
+  :type 'natnum
   :version "30.1")
 
 (define-derived-mode debbugs-gnu-mode tabulated-list-mode "Debbugs"
