@@ -20,4 +20,7 @@ The Info Directory
 
 Emacs
 * Debbugs: (debbugs).           A library for communication with Debbugs.
+* Debbugs Library: (debbugs).   A library for communication with Debbugs.
 * Debbugs UG: (debbugs-ug).     Debbugs User Interface in Emacs.
+* Debbugs User Guide: (debbugs-ug).
+                                Debbugs User Interface in Emacs.
