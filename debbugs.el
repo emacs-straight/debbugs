@@ -590,7 +590,10 @@ Example:
 	  ;; Cache the result, and return.
       (debbugs-put-cache
        (alist-get 'key x)
-       (alist-get 'value x))))
+       (sort (alist-get 'value x)
+             ;; Starting with Emacs 30.1, this can be #'value<.
+             (lambda (x y)
+               (string< (car x) (car y)))))))
       debbugs-soap-invoke-async-object))))
 
 (defun debbugs-get-usertag (&rest query)
