@@ -1,4 +1,4 @@
-This is docruziFv.info, produced by makeinfo version 6.8 from
+This is doccfiW83.info, produced by makeinfo version 6.8 from
 debbugs-ug.texi.
 
 Copyright (C) 2015-2025 Free Software Foundation, Inc.
@@ -24,7 +24,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docruziFv.info,  Node: Top,  Next: Retrieving Bugs,  Up: (dir)
+File: doccfiW83.info,  Node: Top,  Next: Retrieving Bugs,  Up: (dir)
 
 Debbugs User Guide
 ******************
@@ -59,7 +59,7 @@ Mode: (org)Top.).  As backend they use the 'debbugs' Emacs library
 * Mail Command Index::          Debbugs control mailserver commands.
 
 
-File: docruziFv.info,  Node: Retrieving Bugs,  Next: Searching Bugs,  Prev: Top,  Up: Top
+File: doccfiW83.info,  Node: Retrieving Bugs,  Next: Searching Bugs,  Prev: Top,  Up: Top
 
 1 Retrieving Bugs
 *****************
@@ -251,7 +251,7 @@ predefined filter.
      defaults to 't'.
 
 
-File: docruziFv.info,  Node: Searching Bugs,  Next: Presenting Bugs,  Prev: Retrieving Bugs,  Up: Top
+File: doccfiW83.info,  Node: Searching Bugs,  Next: Presenting Bugs,  Prev: Retrieving Bugs,  Up: Top
 
 2 Searching in the Debbugs Database
 ***********************************
@@ -404,7 +404,7 @@ Debbugs server only.
 are not supported.
 
 
-File: docruziFv.info,  Node: Presenting Bugs,  Next: Minor Mode,  Prev: Searching Bugs,  Up: Top
+File: doccfiW83.info,  Node: Presenting Bugs,  Next: Minor Mode,  Prev: Searching Bugs,  Up: Top
 
 3 Presenting Bugs
 *****************
@@ -423,7 +423,7 @@ tabulated list, and 'debbugs-org-*' displays a list of TODO items in
 * Posting Patches::             Posting Patches to Debbugs from the Emacs Repository.
 
 
-File: docruziFv.info,  Node: Tabulated Lists,  Next: TODO Items,  Up: Presenting Bugs
+File: doccfiW83.info,  Node: Tabulated Lists,  Next: TODO Items,  Up: Presenting Bugs
 
 3.1 Tabulated Lists
 ===================
@@ -545,7 +545,7 @@ present an Rmail folder instead.
 your own posting-styles.
 
 
-File: docruziFv.info,  Node: TODO Items,  Next: Control Messages,  Prev: Tabulated Lists,  Up: Presenting Bugs
+File: doccfiW83.info,  Node: TODO Items,  Next: Control Messages,  Prev: Tabulated Lists,  Up: Presenting Bugs
 
 3.2 TODO Items
 ==============
@@ -584,7 +584,7 @@ This enables the following key strokes:
 same meaning as in *note Tabulated Lists::.
 
 
-File: docruziFv.info,  Node: Control Messages,  Next: Applying Patches,  Prev: TODO Items,  Up: Presenting Bugs
+File: doccfiW83.info,  Node: Control Messages,  Next: Applying Patches,  Prev: TODO Items,  Up: Presenting Bugs
 
 3.3 Control Messages
 ====================
@@ -726,7 +726,7 @@ be inconvenient, for example when an external interactive mail client is
 configured.
 
 
-File: docruziFv.info,  Node: Applying Patches,  Next: Posting Patches,  Prev: Control Messages,  Up: Presenting Bugs
+File: doccfiW83.info,  Node: Applying Patches,  Next: Posting Patches,  Prev: Control Messages,  Up: Presenting Bugs
 
 3.4 Applying Patches in the Emacs Repository
 ============================================
@@ -764,7 +764,7 @@ you hit 'M-m' in the GNUS ephemeral group.  Note that the rest of the
 workflow described above is not yet supported.
 
 
-File: docruziFv.info,  Node: Posting Patches,  Prev: Applying Patches,  Up: Presenting Bugs
+File: doccfiW83.info,  Node: Posting Patches,  Prev: Applying Patches,  Up: Presenting Bugs
 
 3.5 Posting Patches to Debbugs from the Emacs Repository
 ========================================================
@@ -820,7 +820,7 @@ configured for the GNU Emacs and GNU ELPA repositories, more entries may
 be added to work with other repositories of other packages.
 
 
-File: docruziFv.info,  Node: Minor Mode,  Next: Command Index,  Prev: Presenting Bugs,  Up: Top
+File: doccfiW83.info,  Node: Minor Mode,  Next: Command Index,  Prev: Presenting Bugs,  Up: Top
 
 4 Minor Mode
 ************
@@ -856,7 +856,7 @@ you might set:
      (add-hook 'gnus-article-mode-hook 'bug-reference-mode)
 
 
-File: docruziFv.info,  Node: Command Index,  Next: Variable Index,  Prev: Minor Mode,  Up: Top
+File: doccfiW83.info,  Node: Command Index,  Next: Variable Index,  Prev: Minor Mode,  Up: Top
 
 Command Index
 *************
@@ -889,7 +889,7 @@ Command Index
 * debbugs-org-tagged:                    Retrieving Bugs.     (line 151)
 
 
-File: docruziFv.info,  Node: Variable Index,  Next: Key Index,  Prev: Command Index,  Up: Top
+File: doccfiW83.info,  Node: Variable Index,  Next: Key Index,  Prev: Command Index,  Up: Top
 
 Variable Index
 **************
@@ -923,7 +923,7 @@ Variable Index
 * debbugs-show-progress:                 Retrieving Bugs.     (line 186)
 
 
-File: docruziFv.info,  Node: Key Index,  Next: Mail Command Index,  Prev: Variable Index,  Up: Top
+File: doccfiW83.info,  Node: Key Index,  Next: Mail Command Index,  Prev: Variable Index,  Up: Top
 
 Key Index
 *********
@@ -959,7 +959,7 @@ Key Index
 * x:                                     Tabulated Lists.     (line  86)
 
 
-File: docruziFv.info,  Node: Mail Command Index,  Prev: Key Index,  Up: Top
+File: doccfiW83.info,  Node: Mail Command Index,  Prev: Key Index,  Up: Top
 
 Debbugs control mailserver commands
 ***********************************

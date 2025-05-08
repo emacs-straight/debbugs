@@ -1,2 +1,2 @@
-;; Generated package description from debbugs.el  -*- mode: lisp-data; no-byte-compile: t -*-
-(define-package "debbugs" "0.44.0.20250311.94450" "SOAP library to access debbugs servers" '((emacs "26.1") (soap-client "3.1.5")) :commit "5191da510cb0152f2f34346ba9c6fdff9b904917" :url "https://elpa.gnu.org/packages/debbugs.html" :authors '(("Michael Albinus" . "michael.albinus@gmx.de")) :maintainer '("Michael Albinus" . "michael.albinus@gmx.de") :keywords '("comm" "hypermedia"))
+;; Generated package description from debbugs.el  -*- no-byte-compile: t -*-
+(define-package "debbugs" "0.44.0.20250505.144705" "SOAP library to access debbugs servers" '((emacs "26.1") (soap-client "3.1.5")) :commit "22fc3c232241afabcd909ba336b43b4e3586a732" :url "https://elpa.gnu.org/packages/debbugs.html" :authors '(("Michael Albinus" . "michael.albinus@gmx.de")) :maintainer '("Michael Albinus" . "michael.albinus@gmx.de") :keywords '("comm" "hypermedia"))
