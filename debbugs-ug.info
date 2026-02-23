@@ -1,4 +1,4 @@
-This is docMLPvqP.info, produced by makeinfo version 7.1.1 from
+This is debbugs-ug.info, produced by makeinfo version 7.2 from
 debbugs-ug.texi.
 
 Copyright © 2015-2026 Free Software Foundation, Inc.
@@ -24,7 +24,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docMLPvqP.info,  Node: Top,  Next: Retrieving Bugs,  Up: (dir)
+File: debbugs-ug.info,  Node: Top,  Next: Retrieving Bugs,  Up: (dir)
 
 Debbugs User Guide
 ******************
@@ -59,7 +59,7 @@ Mode: (org)Top.).  As backend they use the ‘debbugs’ Emacs library
 * Mail Command Index::          Debbugs control mailserver commands.
 
 
-File: docMLPvqP.info,  Node: Retrieving Bugs,  Next: Searching Bugs,  Prev: Top,  Up: Top
+File: debbugs-ug.info,  Node: Retrieving Bugs,  Next: Searching Bugs,  Prev: Top,  Up: Top
 
 1 Retrieving Bugs
 *****************
@@ -251,7 +251,7 @@ predefined filter.
      defaults to ‘t’.
 
 
-File: docMLPvqP.info,  Node: Searching Bugs,  Next: Presenting Bugs,  Prev: Retrieving Bugs,  Up: Top
+File: debbugs-ug.info,  Node: Searching Bugs,  Next: Presenting Bugs,  Prev: Retrieving Bugs,  Up: Top
 
 2 Searching in the Debbugs Database
 ***********************************
@@ -404,7 +404,7 @@ Debbugs server only.
 are not supported.
 
 
-File: docMLPvqP.info,  Node: Presenting Bugs,  Next: Minor Mode,  Prev: Searching Bugs,  Up: Top
+File: debbugs-ug.info,  Node: Presenting Bugs,  Next: Minor Mode,  Prev: Searching Bugs,  Up: Top
 
 3 Presenting Bugs
 *****************
@@ -423,7 +423,7 @@ tabulated list, and ‘debbugs-org-*’ displays a list of TODO items in
 * Posting Patches::             Posting Patches to Debbugs from the Emacs Repository.
 
 
-File: docMLPvqP.info,  Node: Tabulated Lists,  Next: TODO Items,  Up: Presenting Bugs
+File: debbugs-ug.info,  Node: Tabulated Lists,  Next: TODO Items,  Up: Presenting Bugs
 
 3.1 Tabulated Lists
 ===================
@@ -550,7 +550,7 @@ present an Rmail folder instead.
 your own posting-styles.
 
 
-File: docMLPvqP.info,  Node: TODO Items,  Next: Control Messages,  Prev: Tabulated Lists,  Up: Presenting Bugs
+File: debbugs-ug.info,  Node: TODO Items,  Next: Control Messages,  Prev: Tabulated Lists,  Up: Presenting Bugs
 
 3.2 TODO Items
 ==============
@@ -589,7 +589,7 @@ This enables the following key strokes:
 same meaning as in *note Tabulated Lists::.
 
 
-File: docMLPvqP.info,  Node: Control Messages,  Next: Applying Patches,  Prev: TODO Items,  Up: Presenting Bugs
+File: debbugs-ug.info,  Node: Control Messages,  Next: Applying Patches,  Prev: TODO Items,  Up: Presenting Bugs
 
 3.3 Control Messages
 ====================
@@ -731,7 +731,7 @@ be inconvenient, for example when an external interactive mail client is
 configured.
 
 
-File: docMLPvqP.info,  Node: Applying Patches,  Next: Posting Patches,  Prev: Control Messages,  Up: Presenting Bugs
+File: debbugs-ug.info,  Node: Applying Patches,  Next: Posting Patches,  Prev: Control Messages,  Up: Presenting Bugs
 
 3.4 Applying Patches in the Emacs Repository
 ============================================
@@ -769,7 +769,7 @@ you hit ‘M-m’ in the GNUS ephemeral group.  Note that the rest of the
 workflow described above is not yet supported.
 
 
-File: docMLPvqP.info,  Node: Posting Patches,  Prev: Applying Patches,  Up: Presenting Bugs
+File: debbugs-ug.info,  Node: Posting Patches,  Prev: Applying Patches,  Up: Presenting Bugs
 
 3.5 Posting Patches to Debbugs from the Emacs Repository
 ========================================================
@@ -825,7 +825,7 @@ configured for the GNU Emacs and GNU ELPA repositories, more entries may
 be added to work with other repositories of other packages.
 
 
-File: docMLPvqP.info,  Node: Minor Mode,  Next: Command Index,  Prev: Presenting Bugs,  Up: Top
+File: debbugs-ug.info,  Node: Minor Mode,  Next: Command Index,  Prev: Presenting Bugs,  Up: Top
 
 4 Minor Mode
 ************
@@ -861,7 +861,7 @@ you might set:
      (add-hook 'gnus-article-mode-hook 'bug-reference-mode)
 
 
-File: docMLPvqP.info,  Node: Command Index,  Next: Variable Index,  Prev: Minor Mode,  Up: Top
+File: debbugs-ug.info,  Node: Command Index,  Next: Variable Index,  Prev: Minor Mode,  Up: Top
 
 Command Index
 *************
@@ -894,7 +894,7 @@ Command Index
 * debbugs-org-tagged:                    Retrieving Bugs.     (line 151)
 
 
-File: docMLPvqP.info,  Node: Variable Index,  Next: Key Index,  Prev: Command Index,  Up: Top
+File: debbugs-ug.info,  Node: Variable Index,  Next: Key Index,  Prev: Command Index,  Up: Top
 
 Variable Index
 **************
@@ -928,7 +928,7 @@ Variable Index
 * debbugs-show-progress:                 Retrieving Bugs.     (line 186)
 
 
-File: docMLPvqP.info,  Node: Key Index,  Next: Mail Command Index,  Prev: Variable Index,  Up: Top
+File: debbugs-ug.info,  Node: Key Index,  Next: Mail Command Index,  Prev: Variable Index,  Up: Top
 
 Key Index
 *********
@@ -964,7 +964,7 @@ Key Index
 * x:                                     Tabulated Lists.     (line  86)
 
 
-File: docMLPvqP.info,  Node: Mail Command Index,  Prev: Key Index,  Up: Top
+File: debbugs-ug.info,  Node: Mail Command Index,  Prev: Key Index,  Up: Top
 
 Debbugs control mailserver commands
 ***********************************
@@ -1300,61 +1300,61 @@ Debbugs control mailserver commands
      remainder of the message can include explanations, signatures or
      anything else, none of it will be detected by the control server.
 
-
 
 Tag Table:
-Node: Top1100
+Node: Top1099
 Node: Retrieving Bugs2723
-Node: Searching Bugs11121
-Ref: Searching Bugs-Footnote-116470
-Ref: Searching Bugs-Footnote-216558
-Node: Presenting Bugs16649
-Node: Tabulated Lists17326
-Node: TODO Items23192
-Node: Control Messages24683
-Node: Applying Patches28526
-Node: Posting Patches30404
-Node: Minor Mode33538
-Node: Command Index35063
-Node: Variable Index36871
-Node: Key Index38773
-Node: Mail Command Index40816
-Ref: Mail Command Index: reassign40968
-Ref: Mail Command Index: reopen41733
-Ref: Mail Command Index: found42891
-Ref: Mail Command Index: notfound43976
-Ref: Mail Command Index: fixed44389
-Ref: Mail Command Index: notfixed44834
-Ref: Mail Command Index: submitter45456
-Ref: Mail Command Index: forwarded45854
-Ref: Mail Command Index: notforwarded46471
-Ref: Mail Command Index: retitle46676
-Ref: Mail Command Index: severity47064
-Ref: Mail Command Index: clone47399
-Ref: Mail Command Index: merge48168
-Ref: Mail Command Index: forcemerge49559
-Ref: Mail Command Index: unmerge50007
-Ref: Mail Command Index: tags50714
-Ref: Mail Command Index: block51784
-Ref: Mail Command Index: unblock51825
-Ref: Mail Command Index: close52315
-Ref: Mail Command Index: package52969
-Ref: Mail Command Index: owner53580
-Ref: Mail Command Index: noowner53947
-Ref: Mail Command Index: archive54124
-Ref: Mail Command Index: unarchive54269
-Ref: Mail Command Index: #54567
-Ref: Mail Command Index: quit54831
-Ref: Mail Command Index: stop54842
-Ref: Mail Command Index: thank54853
-Ref: Mail Command Index: thanks54865
-Ref: Mail Command Index: thankyou54878
-Ref: Mail Command Index: thank you54893
-Ref: Mail Command Index: --54909
+Node: Searching Bugs11122
+Ref: Searching Bugs-Footnote-116472
+Ref: Searching Bugs-Footnote-216560
+Node: Presenting Bugs16651
+Node: Tabulated Lists17329
+Node: TODO Items23196
+Node: Control Messages24688
+Node: Applying Patches28532
+Node: Posting Patches30411
+Node: Minor Mode33546
+Node: Command Index35072
+Node: Variable Index36881
+Node: Key Index38784
+Node: Mail Command Index40828
+Ref: Mail Command Index: reassign40981
+Ref: Mail Command Index: reopen41746
+Ref: Mail Command Index: found42904
+Ref: Mail Command Index: notfound43989
+Ref: Mail Command Index: fixed44402
+Ref: Mail Command Index: notfixed44847
+Ref: Mail Command Index: submitter45469
+Ref: Mail Command Index: forwarded45867
+Ref: Mail Command Index: notforwarded46484
+Ref: Mail Command Index: retitle46689
+Ref: Mail Command Index: severity47077
+Ref: Mail Command Index: clone47412
+Ref: Mail Command Index: merge48181
+Ref: Mail Command Index: forcemerge49572
+Ref: Mail Command Index: unmerge50020
+Ref: Mail Command Index: tags50727
+Ref: Mail Command Index: block51797
+Ref: Mail Command Index: unblock51838
+Ref: Mail Command Index: close52328
+Ref: Mail Command Index: package52982
+Ref: Mail Command Index: owner53593
+Ref: Mail Command Index: noowner53960
+Ref: Mail Command Index: archive54137
+Ref: Mail Command Index: unarchive54282
+Ref: Mail Command Index: #54580
+Ref: Mail Command Index: quit54844
+Ref: Mail Command Index: stop54855
+Ref: Mail Command Index: thank54866
+Ref: Mail Command Index: thanks54878
+Ref: Mail Command Index: thankyou54891
+Ref: Mail Command Index: thank you54906
+Ref: Mail Command Index: --54922
 
 End Tag Table
 
 
 Local Variables:
 coding: utf-8
+Info-documentlanguage: en
 End:
