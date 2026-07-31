@@ -1,4 +1,4 @@
-This is debbugs.info, produced by makeinfo version 7.2 from
+This is debbugs.info, produced by makeinfo version 7.1.1 from
 debbugs.texi.
 
 Copyright © 2011-2026 Free Software Foundation, Inc.
@@ -716,21 +716,21 @@ package names as user identification.
 
           ⇒ (807 1223 5637)
 
+
 
 Tag Table:
-Node: Top1096
-Node: Installation3258
-Node: Configuration4387
-Node: Requesting bug numbers6961
-Node: Requesting bugs statuses12686
-Node: Searching bugs17142
-Node: Requesting messages24115
-Node: Requesting user tags27199
+Node: Top1098
+Node: Installation3260
+Node: Configuration4389
+Node: Requesting bug numbers6963
+Node: Requesting bugs statuses12688
+Node: Searching bugs17144
+Node: Requesting messages24117
+Node: Requesting user tags27201
 
 End Tag Table
 
 
 Local Variables:
 coding: utf-8
-Info-documentlanguage: en
 End:

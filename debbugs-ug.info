@@ -1,4 +1,4 @@
-This is debbugs-ug.info, produced by makeinfo version 7.2 from
+This is debbugs-ug.info, produced by makeinfo version 7.1.1 from
 debbugs-ug.texi.
 
 Copyright © 2015-2026 Free Software Foundation, Inc.
@@ -1300,61 +1300,61 @@ Debbugs control mailserver commands
      remainder of the message can include explanations, signatures or
      anything else, none of it will be detected by the control server.
 
+
 
 Tag Table:
-Node: Top1099
-Node: Retrieving Bugs2723
-Node: Searching Bugs11122
-Ref: Searching Bugs-Footnote-116472
-Ref: Searching Bugs-Footnote-216560
-Node: Presenting Bugs16651
-Node: Tabulated Lists17329
-Node: TODO Items23196
-Node: Control Messages24688
-Node: Applying Patches28532
-Node: Posting Patches30411
-Node: Minor Mode33546
-Node: Command Index35072
-Node: Variable Index36881
-Node: Key Index38784
-Node: Mail Command Index40828
-Ref: Mail Command Index: reassign40981
-Ref: Mail Command Index: reopen41746
-Ref: Mail Command Index: found42904
-Ref: Mail Command Index: notfound43989
-Ref: Mail Command Index: fixed44402
-Ref: Mail Command Index: notfixed44847
-Ref: Mail Command Index: submitter45469
-Ref: Mail Command Index: forwarded45867
-Ref: Mail Command Index: notforwarded46484
-Ref: Mail Command Index: retitle46689
-Ref: Mail Command Index: severity47077
-Ref: Mail Command Index: clone47412
-Ref: Mail Command Index: merge48181
-Ref: Mail Command Index: forcemerge49572
-Ref: Mail Command Index: unmerge50020
-Ref: Mail Command Index: tags50727
-Ref: Mail Command Index: block51797
-Ref: Mail Command Index: unblock51838
-Ref: Mail Command Index: close52328
-Ref: Mail Command Index: package52982
-Ref: Mail Command Index: owner53593
-Ref: Mail Command Index: noowner53960
-Ref: Mail Command Index: archive54137
-Ref: Mail Command Index: unarchive54282
-Ref: Mail Command Index: #54580
-Ref: Mail Command Index: quit54844
-Ref: Mail Command Index: stop54855
-Ref: Mail Command Index: thank54866
-Ref: Mail Command Index: thanks54878
-Ref: Mail Command Index: thankyou54891
-Ref: Mail Command Index: thank you54906
-Ref: Mail Command Index: --54922
+Node: Top1101
+Node: Retrieving Bugs2725
+Node: Searching Bugs11124
+Ref: Searching Bugs-Footnote-116474
+Ref: Searching Bugs-Footnote-216562
+Node: Presenting Bugs16653
+Node: Tabulated Lists17331
+Node: TODO Items23198
+Node: Control Messages24690
+Node: Applying Patches28534
+Node: Posting Patches30413
+Node: Minor Mode33548
+Node: Command Index35074
+Node: Variable Index36883
+Node: Key Index38786
+Node: Mail Command Index40830
+Ref: Mail Command Index: reassign40983
+Ref: Mail Command Index: reopen41748
+Ref: Mail Command Index: found42906
+Ref: Mail Command Index: notfound43991
+Ref: Mail Command Index: fixed44404
+Ref: Mail Command Index: notfixed44849
+Ref: Mail Command Index: submitter45471
+Ref: Mail Command Index: forwarded45869
+Ref: Mail Command Index: notforwarded46486
+Ref: Mail Command Index: retitle46691
+Ref: Mail Command Index: severity47079
+Ref: Mail Command Index: clone47414
+Ref: Mail Command Index: merge48183
+Ref: Mail Command Index: forcemerge49574
+Ref: Mail Command Index: unmerge50022
+Ref: Mail Command Index: tags50729
+Ref: Mail Command Index: block51799
+Ref: Mail Command Index: unblock51840
+Ref: Mail Command Index: close52330
+Ref: Mail Command Index: package52984
+Ref: Mail Command Index: owner53595
+Ref: Mail Command Index: noowner53962
+Ref: Mail Command Index: archive54139
+Ref: Mail Command Index: unarchive54284
+Ref: Mail Command Index: #54582
+Ref: Mail Command Index: quit54846
+Ref: Mail Command Index: stop54857
+Ref: Mail Command Index: thank54868
+Ref: Mail Command Index: thanks54880
+Ref: Mail Command Index: thankyou54893
+Ref: Mail Command Index: thank you54908
+Ref: Mail Command Index: --54924
 
 End Tag Table
 
 
 Local Variables:
 coding: utf-8
-Info-documentlanguage: en
 End:
